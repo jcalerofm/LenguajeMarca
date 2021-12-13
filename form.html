@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+        body {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 21px;
+            color: rgb(48, 53, 58);
+            background-color: rgb(233, 210, 79);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 950px;
+            margin: 0 auto;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-flat {
+            color: white;
+            padding: 8px 24px;
+            border-radius: 50px;
+            background: #1EDD88;
+            transition: background 0.3s ease;
+            margin-right: 7px;
+        }
+
+        .btn-flat:hover {
+            background: #1BCB7F;
+            color: white;
+        }
+
+        .btn-ghost {
+            color: #4A4A4A;
+            border: 1px solid #4A4A4A;
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-weight: lighter;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+            margin-left: 7px;
+
+        }
+
+        .btn-ghost:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="">
+            <fieldset>
+                <legend>Formulario de Reserva:</legend>
+                <div class="flex-container">
+                    <div>
+                        <label for="nombre">Nombre:</label><br>
+                        <input type="text"><br>
+                        <br>
+                        <label for="apellido">Apellido:</label><br>
+                        <input type="text"><br>
+                        <br>
+                        <label for="dni">Adjuntar DNI:</label><br>
+                        <input type="file"><br>
+                        <br>
+                        <label for="mail">Email:</label><br>
+                        <input type="email" placeholder="Ex: abc@abc.com"><br>
+                        <br>
+                        <label for="telefono">Teléfono</label><br>
+                        <input type="tel" placeholder="Ex: 611111111" pattern="[6-7]{1}[0-9]{8}"><br>
+                        <br>
+                    </div>
+                    <div>
+                        <label for="habitacion">Seleccione tipo de habitacion:</label><br>
+                        <input type="radio" id="individual" name="habitacion" value="Individual">
+                        <label for="individual">Individual</label>
+                        <input type="radio" id="Doble" name="habitacion" nvalue="Doble">
+                        <label for="Doble">Doble</label>
+                        <input type="radio" id="suite" name="habitacion" value="Suite">
+                        <label for="suite">Suite</label><br>
+                        <br>
+                        <label for="habitacion">Añada que servicios desea:</label><br>
+                        <input type="checkbox" value="Desayuno">
+                        <label for="Desayuno">Desayuno</label><br>
+                        <input type="checkbox" value="Almuerzo">
+                        <label for="Almuerzo">Almuerzo</label><br>
+                        <input type="checkbox" value="Cena">
+                        <label for="Cena">Cena</label><br>
+                        <input type="checkbox" value="Piscina">
+                        <label for="Piscina">Piscina</label><br>
+                        <input type="checkbox" value="Spa">
+                        <label for="Spa">Spa</label><br>
+                        <br>
+                        <label for="fecha">Fecha y hora de llegada (del 1/7/2022 al 30/9/2022):</label><br>
+                        <input type="datetime-local" id="fecha" name="fecha" min="2022-07-01T00:00"
+                            max="2022-09-30T23:59"><br>
+                        <br>
+                        <label for="precio">Especifique rango de precio por noche (de 50 a 300):</label>
+                        <input type="range" min="50" max="300"><br>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="item">
+                    <input type="checkbox" name="aceptar" required>
+                    <label for="aceptar">Aceptar las condiciones de uso</label><br>
+                </div>
+                <br>
+                <br>
+                <div class="item">
+                    <input class="btn btn-flat" type="submit" value="Enviar">
+                    <input class="btn btn-ghost" type="reset" value="Reiniciar">
+                </div>
+
+
+
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
